@@ -47,7 +47,7 @@ do{sum += numbers[count];
 average = sum / numbers.length;
 console.log("Average using do-while loop:",parseFloat(average.toFixed(2)));
 
-
+// Average using function
 
 function calculateAverage(a,b,c){
     let sum = a + b + c;
@@ -83,7 +83,35 @@ console.log("Area of the triangle using for loop:",area);
 
 //  for ...in
 area = 0;
-for (let prop in {base : b, height : c}){
-    area = (b * c) / 2;
+for (let prop in {base : base, height : height}){
+    area = (base * height) / 2;
 }
 console.log("Area of the triangle using for...in loop:",area);
+
+// while loop
+area = 0; let i = 0;
+while (i < 1){
+    area = (base * height) / 2;
+    i++
+}
+console.log("Area of the triangle using while loop:",area);
+
+// do while loop
+area = 0;
+let j = 0;
+do {
+    area = (base * height) / 2;
+    j++
+}while(j < 1);
+console.log("Area of the triangle using do...while loop:",area);
+
+// function use
+function calculateArea (base, height){
+    if (base > 0 && height > 0){
+        return (base * height) / 2;
+    }else{
+        return 0;
+    }
+}
+area = calculateArea(base,height);
+console.log("Area of the triangle using function:",area);
