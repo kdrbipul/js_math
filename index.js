@@ -115,3 +115,17 @@ function calculateArea (base, height){
 }
 area = calculateArea(base,height);
 console.log("Area of the triangle using function:",area);
+
+
+// triangle area 
+
+let x = 25; 
+let y = 14; 
+let z = 56; 
+let triangle;
+
+if (x > 0 && y > 0 && z > 0 && x + y > z && y + z > x && x + z > y){
+    let s = (x+y+z) / 2;
+    triangle = Math.sqrt(s*(s-x)*(s-y)*(s-z));
+}
+console.log("Area of triangle using of if-else:", triangle);
